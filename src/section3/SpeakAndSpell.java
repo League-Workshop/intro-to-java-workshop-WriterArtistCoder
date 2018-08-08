@@ -8,16 +8,21 @@ import com.sun.speech.freetts.VoiceManager;
 public class SpeakAndSpell {
 
 	public static void main(String[] args) {
-		// 1. Use the speak method to say the word. "e.g. spell mandlebrot"
-
+		String[] spellings = {"circumnavigate", "deoxyribonucleic"};
+		for (int i = 0; i < spellings.length; i++) {
+			String actualSpelling = spellings[i];
+			speak("Spell " + actualSpelling);
 		// 2. Catch the user's answer in a String
-
-		// 3. If the user spelled the word correctly, speak "correct"
-
+			String userSpelling = JOptionPane.showInputDialog("Well? Go on!");
+		// 3. If the user spelled the word correctly speak "correct"
+			if (actualSpelling.equals(userSpelling)) {
+				speak("correct");
 		// 4. Otherwise say "wrong"
-
+			} else {
 		// 5. repeat the process for other words
-		
+				speak("wrong");
+			}
+		}
 	}
 
 	static void speak(String words) {
