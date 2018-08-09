@@ -26,7 +26,7 @@ public class PentagonCrazy {
 		int i = 1;
 		jinx.hide();
 		// 7. Use a for loop to repeat steps #2 to #11, 200 times. When this is done you should see a pentagon
-		for (int j = 0; j < 120; j++) {
+		for (int j = 0; j < 105; j++) {
 			jinx.setPenColor(r, g, b);
 			// 2. Move the robot 200 pixels
 			jinx.move(i+j);
